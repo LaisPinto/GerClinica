@@ -13,7 +13,7 @@ import java.sql.Statement;
  *
  * @author laisp
  */
-public class Login {
+/*public class Login {
     public boolean login(String login, String senha) throws SQLException {
 
         Pessoa p = new Pessoa();
@@ -27,11 +27,11 @@ public class Login {
             /* Executando o SQL  e armazenando
              o ResultSet em um objeto do tipo
              ResultSet chamado rs */
-            ResultSet rs = stat.executeQuery(sql);
+            //ResultSet rs = stat.executeQuery(sql);
 
             /* Enquanto houver uma proxima linha no
              banco de dados o while roda */
-            while (rs.next()) {
+           /* while (rs.next()) {
                 p.setLogin(rs.getString("login"));
                 p.setSenha(rs.getString("cast(aes_decrypt(senha,'321') as char(50))"));
                 p.setTipo(rs.getInt("pessoa_TIPO"));
@@ -39,4 +39,4 @@ public class Login {
 
         }
     }
-}
+}*/
