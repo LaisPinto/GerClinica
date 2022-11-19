@@ -169,11 +169,11 @@ public class Pessoa {
         this.crm = crm;
     }
 
-    public int getTipo() {
+    public int gettipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void settipo(int tipo) {
         this.tipo = tipo;
     }
 
