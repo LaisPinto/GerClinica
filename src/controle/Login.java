@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import visao.Menu_prin;
 
 /**
  *
@@ -39,7 +40,7 @@ public class Login {
             }//fecha while
             if (p.getLogin().equals(login)&& p.getSenha().equals(senha)) {
                 if(p.gettipo() == 1){
-                   Menu_Adm t = new Menu_Adm();
+                    Menu_prin t = new Menu_prin();
                    t.setVisible(true);
                    flag = true;
                 }
