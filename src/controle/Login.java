@@ -23,7 +23,7 @@ public class Login {
         Statement stat = con.createStatement();
         Boolean flag = null;
         try {
-            String sql = "select login,cast(aes_decrypt(senha,'321') as char(50)),Pessoa_TIPO from pessoa "
+            String sql = "select login,senha,Pessoa_TIPO from pessoa "
                     + "where login like '" + login + "';";
 
             /* Executando o SQL  e armazenando
@@ -35,7 +35,7 @@ public class Login {
              banco de dados o while roda */
             while (rs.next()) {
                 p.setLogin(rs.getString("login"));
-                p.setSenha(rs.getString("cast(aes_decrypt(senha,'321') as char(50))"));
+                p.setSenha(rs.getString("senha"));
                 p.settipo(rs.getInt("pessoa_TIPO"));
             }//fecha while
             if (p.getLogin().equals(login)&& p.getSenha().equals(senha)) {
@@ -49,10 +49,7 @@ public class Login {
                 JOptionPane.showMessageDialog(null, "Usuario ou senha incorreto!");
                 return flag;
                 }
-               
-            
-
-        } catch (Exception e) {
+              } catch (Exception e) {
             throw new SQLException("Erro! " + e.getMessage());
         } finally {
             con.close();

@@ -60,8 +60,6 @@ public class Tela_tab_exame extends javax.swing.JFrame {
         jtfMes = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exame tabela.png"))); // NOI18N

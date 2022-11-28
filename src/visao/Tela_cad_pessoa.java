@@ -58,8 +58,6 @@ public class Tela_cad_pessoa extends javax.swing.JFrame {
         bntCadastrar = new javax.swing.JButton();
         bntLimpar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cadastro.png"))); // NOI18N
@@ -80,12 +78,12 @@ public class Tela_cad_pessoa extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(34, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -461,9 +459,9 @@ public class Tela_cad_pessoa extends javax.swing.JFrame {
             Pessoa p = new Pessoa();
             Adm a = new Adm();
             p.setNome(jtfNome.getText());
+            p.setEstCivil(jtfEstadoCivil.getText());
             p.setEtinia(jtfEtnia.getText());
             p.setSexo(jtfSexo.getText());
-            p.setEstCivil(jtfEstadoCivil.getText());
             p.setRg(jtfRg.getText());
             p.setEndereco(jtfEndereco.getText());
             p.setNum(jtfNumero.getText());
@@ -475,7 +473,7 @@ public class Tela_cad_pessoa extends javax.swing.JFrame {
            
             
            
-            a.cadastrarPessoa(p.getNome(), p.getEstCivil(), p.getEtinia() , p.getSexo() , p.getRg(), p.getEndereco(), p.getNum(), p.getCep() ,p.getCidade(), p.getEstado(), p.getTel(),p.gettipo());
+            a.cadastrarPessoa(p.getNome(), p.getEstCivil(), p.getEtinia(), p.getSexo(), p.getRg(), p.getEndereco(), p.getNum(), p.getCep(), p.getCidade(), p.getEstado(), p.getTel(), WIDTH);
             
             JOptionPane.showMessageDialog(
                     rootPane,

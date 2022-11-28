@@ -19,7 +19,7 @@ public class Adm {
         Connection con = ConexaoBanco.getConexao();
         Statement stat = con.createStatement();
         try {
-          String sql = "select id_pessoa,nome,estado_civil,rua,numero,cep,cidade,estado,telefone  from pessoa where Pessoa_TIPO = 4;";
+          String sql = "select id_pessoa,nome,estado_civil,rua,numero,cep,cidade,estado,telefone  from pessoa where Pessoa_TIPO = 1;";
 
             /* Executando o SQL  e armazenando
              o ResultSet em um objeto do tipo

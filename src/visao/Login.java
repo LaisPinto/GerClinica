@@ -25,11 +25,20 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jtfLogin = new javax.swing.JTextField();
         jtfSenha = new javax.swing.JTextField();
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,8 +66,8 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jtfLogin)
-                            .addComponent(jtfSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)))
+                            .addComponent(jtfLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 129, Short.MAX_VALUE)
+                            .addComponent(jtfSenha)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(181, 181, 181)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -93,18 +102,20 @@ public class Login extends javax.swing.JFrame {
         try {
             if(l.login(jtfLogin.getText(), jtfSenha.getText())){
                 this.setVisible(false);
+       
             }
         }  catch (Exception e) {
-            JOptionPane.showMessageDialog(this,"Erro!" + e.getMessage());
+            JOptionPane.showMessageDialog(this,
+                    "Erro! " + e.getMessage());
         }
     }
     
-    /*private void abrirMenuAdm(){
-        Menu_Adm ma = new Menu_Adm();
-        jtfLogin.add(ma);
-        jtfSenha.add(ma);
-        ma.setVisible(true);
-    }//fecha método*/
+    private void abrirMenuAdm(){
+         Menu_prin mp= new Menu_prin();
+        jtfLogin.add(mp);
+        jtfSenha.add(mp);
+        mp.setVisible(true);
+    }//fecha método
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -141,6 +152,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jtfLogin;
     private javax.swing.JTextField jtfSenha;
     // End of variables declaration//GEN-END:variables

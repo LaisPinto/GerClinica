@@ -10,11 +10,11 @@ import java.sql.SQLException;
  */
 public class ConexaoBanco {
     //Atributos estÃ¡ticos com os dados do Banco de Dados
-    private static final String URL = "jdbc:mysql://localhost:3306/gerClinica";
+    private static final String URL = "jdbc:mysql://localhost:3306/gerclinica";
     private static final String USUARIO = "root";
     private static final String SENHA = "laisp2440";
 
-    //MÃ©todo que efetua a conexÃ£o com o MySQL
+    //Método que efetua a conexÃ£o com o MySQL
     public static Connection getConexao() throws SQLException {
         Connection c = null;
         try {
